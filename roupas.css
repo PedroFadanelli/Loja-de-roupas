@@ -1,18 +1,20 @@
 * {
     padding: 0;
     margin: 0;
-
+    box-sizing: border-box;
 }
 
 body {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background-color: rgb(219, 208, 208);   
+    background-color: #f8f8f8;
+    line-height: 1.6;
+    color: #333;
 }
 
 header {
     background-color: #2b2726;
-    color: rgb(236, 232, 232);
-    padding: 30px;
+    color: #fff;
+    padding: 20px;
     text-align: center;
     position: sticky;
     top: 0;
@@ -21,30 +23,27 @@ header {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    font-size: 24px;
+    font-weight: bold;
 }
 
 header h1 {
-    font-size: xx-large;
+    font-size: 36px;
     letter-spacing: -1.5px;
-    color: rgb(219, 208, 208);
-    text-shadow: 1px 1px 1px rgb(255, 102, 0);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 nav ul li:hover {
-    border-bottom: solid black thin;
+    border-bottom: 2px solid #fff;
     cursor: pointer;
-    transition: .8s ease all;
-    
-
+    transition: .2s ease all;
 }
 
 nav ul li {
     display: inline-block;
     margin-right: 30px;
-    padding: 10px;
-    color: rgb(219, 208, 208);
-    text-shadow: 1px 1px 1px rgb(206, 91, 15);
-    transition: .8s ease all;
 }
 
 nav ul li a {
@@ -52,111 +51,68 @@ nav ul li a {
     text-decoration: none;
     padding: 5px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: large;
-
+    font-size: 20px;
+    transition: .2s ease all;
 }
 
 .container {
-    margin: 20px;
-    height: 100%;
+    margin: 20px auto;
     display: flex;
-    justify-content: space-around;
-    align-items: center;
-    background-color: rgb(219, 208, 208);
-    border-radius: 10px;
-    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
-
 .roupas {
-    border: 5px solid #000000;
+    border: 5px solid #ddd;
     padding: 10px;
-    margin-bottom: 20px;
+    margin: 10px;
     width: 300px;
-    vertical-align: top;
-    background-color: rgb(255, 255, 255);
+    background-color: #fff;
     display: flex;
-    flex-wrap: wrap; 
-    justify-content: space-around;
+    flex-direction: column;
     align-items: center;
-    border-radius: 10px;
-    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    transition: .2s ease all;
 }
 
 .roupas:hover {
-    transition: 0.4s ease-out;
-    transform: scale(1.1);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .roupas img {
     width: 100%;
-    height: 300px;
-
-}
-
-.roupas img:hover {
-    transform: rotate(1, 1);
-
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px 8px 0 0;
 }
 
 .roupas p {
-    color: #000000;
-    font-family: Arial, Helvetica, sans-serif;
-    display: flex;
-    justify-content: center;
-    padding: 30px;
-    text-align: center;
-    align-items: center;
+    color: #333;
+    font-size: 24px;
     font-weight: bold;
-    font-size: 30px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
-
+    margin: 10px 0;
 }
 
 .roupas h2 {
-    display: flex;
-    justify-content: center;
-    padding: 10px;
-    font-size: 28px;
-    font-family: Arial, Helvetica, sans-serif;
-    color: #000000;
-    font-weight: bold;
-    text-align: center;
-    width: 100%;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    margin-left: 20px;
-    margin-right: 20px;
-    background-color: rgb(255, 255, 255);
+    font-size: 20px;
+    font-weight: normal;
 }
 
 footer {
-    background-color: #333;
+    background-color: #2b2726;
     color: #fff;
-    padding: 30px;
+    padding: 20px;
     display: flex;
     justify-content: center;
-    align-items: center;
-    font-size: 20px;
-    font-family: Arial, Helvetica, sans-serif;
-    letter-spacing: 2px;
-    bottom: 0;
-    width: 100%;
-    height: 50px;
-    z-index: 100;
 }
 
 .redes {
     list-style: none;
     display: grid;
-    grid-template-columns: 50px 50px 50px 50px;
-    align-items: center;
-    justify-content: center;
-    margin: 0;
-    padding: 0;
-    text-align: center;
-    font-size: 30px;
+    grid-template-columns: repeat(4, 40px);
+    gap: 20px;
 }
 
 .insta {
@@ -164,27 +120,22 @@ footer {
     width: 24px;
     height: 24px;
     align-self: center;
-    justify-self: center;
-
 }
 
-.comprar{
+.comprar {
     background-color: #1f1726;
-    color: white;
-    font-size: 22px;
-    padding: 10px;
-    border: 1px solid white;
-    border-radius: 22px;
-    align-self: center;
-    width: fit-content;
-    display: flex;
-    justify-content: center;
+    color: #fff;
+    font-size: 18px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 50px;
+    margin-top: auto;
+    cursor: pointer;
+    transition: .2s ease all;
 }
 
 .comprar:hover {
-    transform: scale(1.1);
-    transition-duration: 0.5s;
-    box-shadow: 0 2px 4px rgba(0, 0, 1, 1.2);
+    background-color: #111;
 }
 
 .support-button {
@@ -198,58 +149,515 @@ footer {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
     text-decoration: none;
     font-size: 20px;
+    transition: .2s ease all;
 }
 
 .support-button:hover {
-    cursor: pointer;
-    opacity: 0.9;
-    filter: brightness(.9) contrast(3.2);
-    transition: all ease-in-out.2s;
-
+    background-color: #0056b3;
 }
-
 
 .barra-pesquisa {
     display: flex;
     align-items: center;
-    margin-left: 80px;
+    justify-content: center;
+    margin: 20px;
 }
-
 
 .barra-pesquisa input[type="text"] {
     padding: 10px;
-    border-radius: 10px;
+    border-radius: 50px;
     font-size: 16px;
     border: none;
     outline: none;
-    width: 330px;
- 
+    width: 100%;
+    max-width: 330px;
 }
 
 .barra-pesquisa button[type="submit"] {
     padding: 15px;
     background-color: transparent;
-    color: white;
+    color: #fff;
     border: none;
-    border-radius: 5px;
+    border-radius: 50%;
     cursor: pointer;
+    transition: .2s ease all;
 }
 
 .barra-pesquisa button img {
-    width: 30px;
-    height: 30px;
+    width: 24px;
+    height: 24px;
 }
-
 
 .barra-pesquisa i {
     font-size: 20px;
+    position: relative;
+    top: 2px;
+    margin-left: 10px;
+    transition: .2s ease all;
 }
 
-.pedrin{
+.pedrin {
+    font-family: 'Inter', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    color: gray;
+}
+
+@media only screen and (max-width: 768px) {
+    header {
+        grid-template-columns: 1fr;
+    }
+
+    nav ul {
+        text-align: center;
+    }
+
+    .container {
+        justify-content: center;
+    }
+
+    .roupas {
+        width: 90%;
+    }
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: #f8f8f8;
+    line-height: 1.6;
+    color: #333;
+}
+
+header {
+    background-color: #2b2726;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    font-family: 'Modern Age', sans-serif;
+    letter-spacing: 2px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+header h1 {
+    font-size: 36px;
+    letter-spacing: -1.5px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+nav ul li:hover {
+    border-bottom: 2px solid #fff;
+    cursor: pointer;
+    transition: .2s ease all;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 30px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 20px;
+    transition: .2s ease all;
+}
+
+.container {
+    margin: 20px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.roupas {
+    border: 5px solid #ddd;
+    padding: 10px;
+    margin: 10px;
+    width: 300px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    transition: .2s ease all;
+}
+
+.roupas:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.roupas img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px 8px 0 0;
+}
+
+.roupas p {
+    color: #333;
+    font-size: 24px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.roupas h2 {
+    font-size: 20px;
+    font-weight: normal;
+}
+
+footer {
+    background-color: #2b2726;
+    color: #fff;
+    padding: 20px;
     display: flex;
     justify-content: center;
-    margin-right: 30px;
-    font-family: 'inter', sans-serif;
-    font-family: 'poppins', sans-serif;
+}
+
+.redes {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(4, 40px);
+    gap: 20px;
+}
+
+.insta {
+    display: flex;
+    width: 24px;
+    height: 24px;
+    align-self: center;
+}
+
+.comprar {
+    background-color: #1f1726;
+    color: #fff;
+    font-size: 18px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 50px;
+    margin-top: auto;
+    cursor: pointer;
+    transition: .2s ease all;
+}
+
+.comprar:hover {
+    background-color: #111;
+}
+
+.support-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #007bff;
+    color: #fff;
+    padding: 20px 40px;
+    border-radius: 50px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    text-decoration: none;
+    font-size: 20px;
+    transition: .2s ease all;
+}
+
+.support-button:hover {
+    background-color: #0056b3;
+}
+
+.barra-pesquisa {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+}
+
+.barra-pesquisa input[type="text"] {
+    padding: 10px;
+    border-radius: 50px;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    width: 100%;
+    max-width: 330px;
+}
+
+.barra-pesquisa button[type="submit"] {
+    padding: 15px;
+    background-color: transparent;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: .2s ease all;
+}
+
+.barra-pesquisa button img {
+    width: 24px;
+    height: 24px;
+}
+
+.barra-pesquisa i {
+    font-size: 20px;
+    position: relative;
+    top: 2px;
+    margin-left: 10px;
+    transition: .2s ease all;
+}
+
+.pedrin {
+    font-family: 'Inter', sans-serif;
+    font-family: 'Poppins', sans-serif;
     color: gray;
+}
+
+@media only screen and (max-width: 768px) {
+    header {
+        grid-template-columns: 1fr;
+    }
+
+    nav ul {
+        text-align: center;
+    }
+
+    .container {
+        justify-content: center;
+    }
+
+    .roupas {
+        width: 90%;
+    }
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: #f8f8f8;
+    line-height: 1.6;
+    color: #333;
+}
+
+header {
+    background-color: #2b2726;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    font-family: 'Modern Age', sans-serif;
+    letter-spacing: 2px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+header h1 {
+    font-size: 36px;
+    letter-spacing: -1.5px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+nav ul li:hover {
+    border-bottom: 2px solid #fff;
+    cursor: pointer;
+    transition: .2s ease all;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 30px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 20px;
+    transition: .2s ease all;
+}
+
+.container {
+    margin: 20px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.roupas {
+    border: 5px solid #ddd;
+    padding: 10px;
+    margin: 10px;
+    width: 300px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    transition: .2s ease all;
+}
+
+.roupas:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.roupas img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px 8px 0 0;
+}
+
+.roupas p {
+    color: #333;
+    font-size: 24px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.roupas h2 {
+    font-size: 20px;
+    font-weight: normal;
+}
+
+footer {
+    background-color: #2b2726;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.redes {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(4, 40px);
+    gap: 20px;
+}
+
+.insta {
+    display: flex;
+    width: 24px;
+    height: 24px;
+    align-self: center;
+}
+
+.comprar {
+    background-color: #1f1726;
+    color: #fff;
+    font-size: 18px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 50px;
+    margin-top: auto;
+    cursor: pointer;
+    transition: .2s ease all;
+}
+
+.comprar:hover {
+    background-color: #111;
+}
+
+.support-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #007bff;
+    color: #fff;
+    padding: 20px 40px;
+    border-radius: 50px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    text-decoration: none;
+    font-size: 20px;
+    transition: .2s ease all;
+}
+
+.support-button:hover {
+    background-color: #0056b3;
+}
+
+.barra-pesquisa {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+}
+
+.barra-pesquisa input[type="text"] {
+    padding: 10px;
+    border-radius: 50px;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    width: 100%;
+    max-width: 330px;
+}
+
+.barra-pesquisa button[type="submit"] {
+    padding: 15px;
+    background-color: transparent;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: .2s ease all;
+}
+
+.barra-pesquisa button img {
+    width: 24px;
+    height: 24px;
+}
+
+.barra-pesquisa i {
+    font-size: 20px;
+    position: relative;
+    top: 2px;
+    margin-left: 10px;
+    transition: .2s ease all;
+}
+
+.pedrin {
+    font-family: 'Inter', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    color: gray;
+}
+
+@media only screen and (max-width: 768px) {
+    header {
+        grid-template-columns: 1fr;
+    }
+
+    nav ul {
+        text-align: center;
+    }
+
+    .container {
+        justify-content: center;
+    }
+
+    .roupas {
+        width: 90%;
+    }
 }
